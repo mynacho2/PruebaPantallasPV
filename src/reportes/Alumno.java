@@ -9,6 +9,9 @@ package reportes;
 /**
  *
  * @author Ignacio
+ * aaaaaaaaaaaaaaa
+ * a
+ * sssssssssss
  */
 public class Alumno {
     private String nombre;
