@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9809d394-5d3f-4124-869a-c89ebf7b58f0">
+	<property name="template.type" value="columnar"/>
+	<style name="Title" forecolor="#000000" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<image>
+				<reportElement x="2" y="0" width="118" height="132" uuid="2b0e462a-61ee-4851-a38e-04bff08a192b"/>
+				<imageExpression><![CDATA["tree1.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement style="Title" x="120" y="10" width="435" height="93" uuid="7640cfa1-e8e4-4d2f-ab78-85472ea8ff88"/>
+				<textElement>
+					<font size="80" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tree Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="336" y="103" width="217" height="29" uuid="7fbe6163-822b-486a-890b-581e64b34742"/>
+				<textElement>
+					<font size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tree SubTitle]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="91" splitType="Stretch">
+			<image>
+				<reportElement x="2" y="0" width="56" height="80" uuid="8360714b-9969-4f3f-a4fd-10266f11f89a"/>
+				<imageExpression><![CDATA["tree2.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="2" y="90" width="551" height="1" uuid="4e7cd8d9-3bed-4f6a-b962-6bb516a2b29d"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="f931f38d-f092-4cec-8237-e2be1e3c8f04"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="13" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="2" y="0" width="555" height="13" forecolor="#D0B48E" backcolor="#9DB1B8" uuid="02a8bdb1-ce05-4d8a-8bcf-12e468028d4f"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="-1" width="40" height="13" forecolor="#FFFFFF" uuid="1f19db8f-9d2c-417a-9624-24193113276d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="-1" width="80" height="13" forecolor="#FFFFFF" uuid="34a597ab-bc4c-406b-80a8-bdc6c033770d"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="0" width="197" height="13" forecolor="#FFFFFF" uuid="32834760-72b5-4dc1-80de-68f5cb3efa7d"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

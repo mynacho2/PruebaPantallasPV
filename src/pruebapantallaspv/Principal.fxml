@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pruebapantallaspv.PrincipalController">
+   <children>
+      <SplitPane dividerPositions="0.7" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="200.0" minWidth="200.0" prefHeight="398.0" prefWidth="384.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TableView fx:id="tabla" layoutX="-14.0" minHeight="100.0" minWidth="100.0" prefHeight="406.0" prefWidth="422.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="clmNombre" prefWidth="132.0" text="Nombre" />
+                      <TableColumn fx:id="clmApellido" prefWidth="120.0" text="Apellido" />
+                        <TableColumn fx:id="clmEdad" prefWidth="44.0" text="Edad" />
+                        <TableColumn fx:id="clmTelefono" prefWidth="125.0" text="Telefono" />
+                    </columns>
+                     <rotationAxis>
+                        <Point3D x="50.0" y="50.0" z="50.0" />
+                     </rotationAxis>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="54.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox minHeight="50.0" minWidth="50.0" prefHeight="398.0" prefWidth="176.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label text="Nombre" />
+                        <TextField fx:id="txtNombre" prefHeight="25.0" prefWidth="97.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label text="Apellido" />
+                        <TextField fx:id="txtApellido" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label text="Edad" />
+                        <TextField fx:id="txtEdad" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label text="Telefono" />
+                        <TextField fx:id="txtTelefono" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label />
+                        <Button fx:id="btnAnadir" mnemonicParsing="false" onAction="#handleButtonAnadirAction" prefHeight="25.0" prefWidth="200.0" text="Añadir" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label>
+                           <font>
+                              <Font size="4.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#handleButtonModificarAction" prefHeight="25.0" prefWidth="182.0" text="Modificar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label>
+                           <font>
+                              <Font size="5.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#handleButtonEliminarAction" prefHeight="25.0" prefWidth="177.0" text="Eliminar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Label>
+                           <font>
+                              <Font size="5.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#handleButtonNuevoAction" prefHeight="25.0" prefWidth="175.0" text="Nuevo"  />
+                        
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
