@@ -10,7 +10,7 @@ package reportes;
  *
  * @author Ignacio
  * aaaaaaaaaaaaaaa
- * a
+ * akñlkñl
  * sssssssssss
  */
 public class Alumno {
