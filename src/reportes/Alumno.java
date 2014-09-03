@@ -12,6 +12,11 @@ package reportes;
  * aaaaaaaaaaaaaaa
  * akñlkñl
  * sssssssssss
+ * njn
+ * fsd
+ * fas
+ * fas
+ * 
  */
 public class Alumno {
     private String nombre;
