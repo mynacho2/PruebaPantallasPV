@@ -9,7 +9,14 @@ package pruebapantallaspv;
 /**
  *
  * @author Jonnathan
+ * fsadfsdhfkjadshf}
+ * 
+ * sdafsdafas
  */
 public class uriel {
+
+    public uriel() {
+    }
     
 }
+
